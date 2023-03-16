@@ -8,8 +8,11 @@ export const useFinalCheck = createSlice({
     addObj: (state, action) => {
       state.value = action.payload.items;
     },
+    RemoveData: (state, action) => {
+      state.value = state.value.id !== action.payload.id;
+    },
   },
 });
 
-export const { addObj } = useFinalCheck.actions;
+export const { addObj, RemoveData } = useFinalCheck.actions;
 export default useFinalCheck.reducer;
