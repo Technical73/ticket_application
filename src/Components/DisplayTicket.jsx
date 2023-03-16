@@ -13,7 +13,8 @@ const DisplayTicket = () => {
       <Grid
         container
         sx={{
-          gap: 2,
+          gap: 7,
+          paddingY: "30px",
         }}
       >
         <Grid items xs={12} md={5}>
@@ -23,7 +24,7 @@ const DisplayTicket = () => {
                 variant="h6"
                 sx={{
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "red",
                   paddingY: "10px",
                 }}
               >
@@ -70,15 +71,18 @@ const DisplayTicket = () => {
           {final && (
             <>
               <Card
-                maxWidth="100%"
                 sx={{
                   height: "250px",
-
+                  width: "400px",
                   borderRadius: "15%",
                   boxShadow: "2px 2px 2px 2px purple",
                 }}
               >
-                <CardContent>
+                <CardContent
+                  sx={{
+                    paddingY: "20px",
+                  }}
+                >
                   <Stack direction="row" justifyContent="space-between">
                     <Typography
                       variant="h5"
@@ -109,7 +113,7 @@ const DisplayTicket = () => {
                     sx={{
                       paddingY: "12px",
                       fontSize: "19px",
-                      color: "pink",
+                      color: "red",
                       textAlign: "center",
                     }}
                   >
