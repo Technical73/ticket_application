@@ -17,15 +17,22 @@ const Registration = () => {
             sx={{
               textAlign: "center",
               fontSize: "27px",
-              fontWeight: "thin",
+              fontWeight: "bold",
               fontStyle: "Inconsolata",
+              paddingY: "5px",
+              color: "red",
             }}
           >
             Terms and Conditions for the safety Ride
           </Typography>
         </Grid>
         <Grid xs={12} md={12}>
-          <Typography variant="p">
+          <Typography
+            variant="body1"
+            sx={{
+              padding: "5px",
+            }}
+          >
             If the Event is cancelled in whole, or in part, due to a Force
             Majeure Event as defined below, You will not be entitled to a
             refund. Notwithstanding the foregoing, the Company may issue, at the

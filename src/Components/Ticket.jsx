@@ -20,7 +20,11 @@ const Ticket = () => {
   return (
     <>
       <TableContainer component={Paper}>
-        <Table sx={{ maxWidth: 650 }}>
+        <Table
+          sx={{
+            maxWidth: 650,
+          }}
+        >
           {user.length > 0 && (
             <TableHead>
               <TableRow>

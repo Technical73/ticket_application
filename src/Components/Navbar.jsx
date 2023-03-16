@@ -21,18 +21,27 @@ const Navbar = () => {
       <AppBar
         position="static"
         sx={{
-          marginBottom: "19px",
+          marginBottom: "10px",
           backgroundColor: "black",
         }}
       >
         <Toolbar>
-          <AddBusinessRoundedIcon
-            sx={{
-              transform: "scale(2)",
-              marginRight: "18px",
-              marginLeft: "9px",
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "red",
             }}
-          />
+          >
+            <AddBusinessRoundedIcon
+              sx={{
+                transform: "scale(2)",
+                marginRight: "18px",
+                marginLeft: "9px",
+                fontSize: "18px",
+              }}
+            />
+          </Link>
 
           {isMatch ? (
             <>
@@ -40,10 +49,11 @@ const Navbar = () => {
                 variant="span"
                 component="h5"
                 sx={{
-                  fontSize: "22px",
-                  fontWeight: "thin",
+                  fontSize: "18px",
+                  fontWeight: "bold",
                   fontStyle: "Inconsolata",
                   color: "red",
+                  margin: "0 auto",
                 }}
               >
                 Dexter@Ticket
@@ -57,30 +67,30 @@ const Navbar = () => {
                 onChange={(e) => setValue(e.target.value)}
                 indicatorColor="secondary"
                 sx={{
-                  marginLeft: " auto",
+                  marginLeft: "auto",
                 }}
               >
                 <Link
                   to="/"
                   style={{
                     textDecoration: "none",
-                    color: "red",
-                    fontSize: "24px",
-                    fontWeight: "thin",
                   }}
                 >
-                  <Tab label="Home" />
+                  <Tab
+                    label="Home"
+                    sx={{ color: "red", fontWeight: "bold", fontSize: "18px" }}
+                  />
                 </Link>
                 <Link
                   to="ticket"
                   style={{
                     textDecoration: "none",
-                    color: "red",
-                    fontSize: "24px",
-                    fontWeight: "thin",
                   }}
                 >
-                  <Tab label="Ticket" />
+                  <Tab
+                    label="Ticket"
+                    sx={{ color: "red", fontWeight: "bold", fontSize: "18px" }}
+                  />
                 </Link>
               </Tabs>
             </>

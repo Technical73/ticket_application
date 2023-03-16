@@ -16,20 +16,26 @@ const Menu = () => {
   return (
     <>
       <Drawer anchor="left" open={open} onClose={() => setOpen(true)}>
-        <List>
+        <List
+          sx={{
+            backgroundColor: "black",
+            height: "100vh",
+          }}
+        >
           <ListItemButton>
             <Link
               to="/"
               style={{
                 textDecoration: "none",
-                color: "red",
-                fontSize: "24px",
-                fontWeight: "thin",
               }}
               onClick={() => setOpen(false)}
             >
               <ListItemIcon>
-                <ListItemText>Home</ListItemText>
+                <ListItemText
+                  sx={{ color: "red", fontWeight: "bold", fontSize: "18px" }}
+                >
+                  Home
+                </ListItemText>
               </ListItemIcon>
             </Link>
           </ListItemButton>
@@ -39,14 +45,15 @@ const Menu = () => {
               to="Ticket"
               style={{
                 textDecoration: "none",
-                color: "red",
-                fontSize: "24px",
-                fontWeight: "thin",
               }}
               onClick={() => setOpen(false)}
             >
               <ListItemIcon>
-                <ListItemText>Ticket</ListItemText>
+                <ListItemText
+                  sx={{ color: "red", fontWeight: "bold", fontSize: "18px" }}
+                >
+                  Ticket
+                </ListItemText>
               </ListItemIcon>
             </Link>
           </ListItemButton>
@@ -56,7 +63,8 @@ const Menu = () => {
         onClick={() => setOpen(!open)}
         sx={{
           marginLeft: "auto",
-          color: "white",
+          color: "red",
+          fontSize: "18px",
         }}
       >
         <MenuIcon color="white" />
